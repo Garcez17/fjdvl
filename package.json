@@ -8,12 +8,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "drei": "^1.5.7",
     "next": "12.0.4",
+    "next-images": "^1.8.2",
+    "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "react-slick": "^0.28.1",
+    "react-three-fiber": "^5.3.7",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.3",
+    "three": "^0.123.0"
   },
   "devDependencies": {
+    "@types/node": "^16.11.9",
+    "@types/react": "^17.0.35",
+    "@types/react-slick": "^0.23.7",
+    "@types/styled-components": "^5.1.15",
     "eslint": "7",
-    "eslint-config-next": "12.0.4"
+    "eslint-config-next": "12.0.4",
+    "typescript": "^4.5.2"
   }
 }
