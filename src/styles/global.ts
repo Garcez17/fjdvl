@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   :root {
-    --background: #232323;
-    --gray-800: #332F2E;
+    --background: #1C1C1E;
+    --gray-800: #313233;
     --green-500: #51B853;
     --white: #FFFFFF;
     --gray-100: #DCE2E6;
@@ -12,7 +12,7 @@ export default createGlobalStyle`
     --blue-100: #DDE9F0;
     --blue-600: #115D8C;
     --blue-800: #123952;
-    --orange-500: #F25D27;
+    --orange-500: #E84E2C;
   }
   
   * {
@@ -24,7 +24,7 @@ export default createGlobalStyle`
   body {
     background: var(--background);
     color: var(--white);
-    font: 400 1rem 'Heebo', 'Barlow', Roboto, sans-serif;
+    font: 400 1rem 'MedievalSharp', sans-serif;
   }
   
   button {
@@ -49,6 +49,10 @@ export default createGlobalStyle`
   
   input:-webkit-autofill {
     -webkit-text-fill-color: var(--gray-500) !important;
+  }
+  
+  canvas {
+    cursor: grab;
   }
   
   @media (max-width: 1080px) {

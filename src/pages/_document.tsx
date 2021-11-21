@@ -48,10 +48,7 @@ export default class MyDocument extends Document {
             href="https://fonts.gstatic.com"
             crossOrigin="crossorigin"
           />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Heebo:wght@400;600&family=Roboto:wght@400;500;700&display=swap"
-            rel="stylesheet"
-          />
+          <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />

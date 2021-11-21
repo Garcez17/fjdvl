@@ -3,8 +3,8 @@ import { useFrame } from "react-three-fiber";
 import * as THREE from "three";
 import { Html } from "drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { Object3D } from "three/src/core/Object3D"; //Object3D types
-import { AnimationClip } from "three/src/animation/AnimationClip"; //Animation types
+import { Object3D } from "three/src/core/Object3D";
+import { AnimationClip } from "three/src/animation/AnimationClip";
 
 interface group {
   current: {
@@ -28,18 +28,14 @@ type ModelProps = {
 }
 
 const Model: React.FC<ModelProps> = ({ moviment }) => {
-  /* Refs */
   const group: group = useRef();
   const actions: actions = useRef();
 
-  /* State */
   const [model, setModel] = useState<Object3D | null>(null);
   const [animation, setAnimation] = useState<AnimationClip[] | null>(null);
 
-  /* Mixer */
   const [mixer] = useState(() => new THREE.AnimationMixer(null));
 
-  /* Load model */
   useEffect(() => {
     const loader = new GLTFLoader();
     loader.load("scene.gltf", async (gltf) => {
@@ -64,9 +60,7 @@ const Model: React.FC<ModelProps> = ({ moviment }) => {
   //   }
   // }, [animation]);
 
-  /* Animation update */
   useFrame((_, delta) => mixer.update(delta));
-  /* Rotation */
   useFrame(() => {
     if (typeof group.current != "undefined")
       return (moviment ? group.current.rotation.y += 0.01 : group.current.rotation.y += 0);
@@ -79,7 +73,9 @@ const Model: React.FC<ModelProps> = ({ moviment }) => {
           <primitive ref={group} name="Object_0" object={model} />
         </group>
       ) : (
-        <Html>Loading...</Html>
+        <Html>
+          <p>Loading...</p>
+        </Html>
       )}
     </>
   );

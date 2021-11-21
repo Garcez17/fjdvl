@@ -1,4 +1,4 @@
-import { Container, Logo, Wrapper } from "../styles/components/Header/styles";
+import { Container, LogoContainer, Logo, FlagDiv, Wrapper } from "../styles/components/Header/styles";
 
 export function Header() {
   return (
@@ -7,11 +7,14 @@ export function Header() {
         <ul>
           <li>Home</li>
           <li>Produtos</li>
-          <li>
-            <Logo />
-          </li>
+        </ul>
+        <LogoContainer>
+          <Logo />
+          <FlagDiv />
+        </LogoContainer>
+        <ul>
           <li>Contato</li>
-          <li>Quem Somos</li>
+          <li>Contato</li>
         </ul>
       </Wrapper>
     </Container>
